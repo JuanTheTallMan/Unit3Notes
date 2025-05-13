@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Avatar Selector</title>
+    <link href ="style.css" rel = "stylesheet" type = "text/css"/>
+    <style>
+        .content{
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        img{
+            width: 430px;
+            height: 242px;
+        }
+    </style>
+</head>
+<body>
+<div class = "container">
+  <div class = "content">
+    <div class = "row">
+        <fieldset>
+            <legend>Avatar</legend>
+            <img src = "https://img.freepik.com/free-photo/textured-canvas-surface_1194-7556.jpg?semt=ais_hybrid&w=740" alt = "Avatar">
+        </fieldset>
+    </div>
+      <fieldset>
+            <legend>Avatar Selector</legend>
+            <div class = "row">
+                <div>
+                    <button id = "1">Avatar One</button>
+                </div>
+                <div>
+                    <button id = "2">Avatar Two</button>
+                </div>
+                <div>
+                    <button id = "3">Avatar Three</button>
+                </div>
+            </div>
+            <div class = "row">
+                <div>
+                    <button id = "4">Avatar Four</button>
+                </div>
+                <div>
+                    <button id = "5">Avatar Five</button>
+                </div>
+                <div>
+                    <button id = "6">Avatar Six</button>
+                </div>
+            </div>
+      </fieldset>
+  </div>
+</div>
+
+<script>
+    const picture = document.querySelector('img');
+
+    const one = document.getElementById('1');
+    const two = document.getElementById('2');
+    const three = document.getElementById('3');
+    const four = document.getElementById('4');
+    const five = document.getElementById('5');
+    const six = document.getElementById('6');
+
+    one.addEventListener('click', function (e){
+        picture.src = 'https://images.theconversation.com/files/651621/original/file-20250226-32-jxjhmy.jpg?ixlib=rb-4.1.0&rect=0%2C0%2C5991%2C3997&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip'
+    });
+
+    two.addEventListener('click', function (e) {
+        picture.src = 'https://www.wnct.com/wp-content/uploads/sites/99/2022/07/Cat.jpg?w=2560&h=1440&crop=1'
+    });
+
+    three.addEventListener('click', function (e) {
+        picture.src = 'https://bestfriends.org/sites/default/files/resource_article_images/Robin-cat-5178LF.jpg'
+    });
+
+    four.addEventListener('click', function (e) {
+        picture.src = 'https://t4.ftcdn.net/jpg/00/68/33/03/360_F_68330331_dKqChy33w0TcNHJEkqT5iw97QOX8la7F.jpg'
+    });
+
+    five.addEventListener('click', function (e) {
+        picture.src = 'https://i.ytimg.com/vi/PKffm2uI4dk/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgSig8MA8=&rs=AOn4CLCacYVygjaridyTzgHImmhSORfAog'
+    });
+
+    six.addEventListener('click', function (e) {
+        picture.src = 'https://smartcdn.gprod.postmedia.digital/healthing/wp-content/uploads/2022/05/GettyImages-648509510-e1651686721279.jpg?quality=90&strip=all&w=704&h=395'
+    });
+
+</script>
+</body>
+</html>
