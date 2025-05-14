@@ -14,6 +14,10 @@
             width: 430px;
             height: 242px;
         }
+
+        .row{
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
@@ -21,10 +25,11 @@
   <div class = "content">
     <div class = "row">
         <fieldset>
-            <legend>Avatar</legend>
+            <legend>Choose your Cat Game Avatar</legend>
             <img src = "https://img.freepik.com/free-photo/textured-canvas-surface_1194-7556.jpg?semt=ais_hybrid&w=740" alt = "Avatar">
         </fieldset>
     </div>
+    <div class = "row">
       <fieldset>
             <legend>Avatar Selector</legend>
             <div class = "row">
@@ -49,7 +54,11 @@
                     <button id = "6">Avatar Six</button>
                 </div>
             </div>
+            <div class = "row">
+                <button id = "clearButton">Clear</button>
+            </div>
       </fieldset>
+    </div>
   </div>
 </div>
 
@@ -62,6 +71,7 @@
     const four = document.getElementById('4');
     const five = document.getElementById('5');
     const six = document.getElementById('6');
+    const clear = document.getElementById('clearButton');
 
     one.addEventListener('click', function (e){
         picture.src = 'https://images.theconversation.com/files/651621/original/file-20250226-32-jxjhmy.jpg?ixlib=rb-4.1.0&rect=0%2C0%2C5991%2C3997&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip'
@@ -87,6 +97,9 @@
         picture.src = 'https://smartcdn.gprod.postmedia.digital/healthing/wp-content/uploads/2022/05/GettyImages-648509510-e1651686721279.jpg?quality=90&strip=all&w=704&h=395'
     });
 
+    clear.addEventListener('click', function (e) {
+        picture.src = 'https://img.freepik.com/free-photo/textured-canvas-surface_1194-7556.jpg?semt=ais_hybrid&w=740'
+    })
 </script>
 </body>
 </html>
