@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rect Area</title>
+    <link href ="style.css" rel = "stylesheet" type = "text/css"/>
+</head>
+<body>
+<div class = "container">
+  <div class = "content">
+    <h1>Area of a Rectangle</h1>
+    <div class = "row">
+        <div>
+            <label for = "base">Base</label>
+            <input type = "text" id = "base" name = "base"  style = "width: 200px;">
+        </div>
+
+        <div>
+            <label for = "height">Height</label>
+            <input type = "text" id = "height" name = "height" style = "width: 200px;">
+        </div>
+    </div>
+    <div class = "row">
+        <button id = "calculate">Calculate</button>
+        <button id = "clear">Clear</button>
+    </div>
+    <p class = "hidden"></p>
+  </div>
+</div>
+
+<script>
+    const base = document.getElementById('base');
+    const height = document.getElementById('height');
+    const answer = document.querySelector('p');
+
+    const calculate = document.getElementById('calculate');
+    const clear = document.getElementById('clear');
+
+    function multiply(a, b) {
+        return a * b;
+    }
+
+    calculate.addEventListener('click', function() {
+        answer.classList.remove("hidden");
+        let result = multiply();
+        answer.textContent = 'The area of the rectangle is ' + result;
+    })
+
+    clear.addEventListener('click', function(e){
+        base.value = "";
+        height.value = "";
+        answer.classList.add("hidden");
+    })
+</script>
+</body>
+</html>

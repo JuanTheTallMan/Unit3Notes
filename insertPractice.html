@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href ="style.css" rel = "stylesheet" type = "text/css"/>
+</head>
+<body>
+<div class = "container">
+  <div class = "content">
+    <h3>What is this?</h3>
+    <h4>I don't want this</h4>
+  </div>
+</div>
+<script>
+  const content = document.querySelector('.content');
+  //Replace contents of a html tag using innerHTML
+  content.innerHTML = '<h1 class = "gone">Costco Pizza for the Win!</h1><h4>Also, San Francisco sounds fun to visit</h4>';
+
+  //add a new element in addition to existing elements
+  const pizza = document.createElement('h1');
+  pizza.innerHTML = 'Costco Pizza for the Win!';
+  content.appendChild(pizza);
+
+  //put this at the top in addition to existing elements
+  const food = document.createElement('h1');
+  food.innerHTML = 'Chinese Food, yum :D';
+  content.insertAdjacentElement('beforeend', food);
+
+  //to remove an element
+  const unwantedElement = document.querySelector('h4');
+  unwantedElement.remove();
+
+  const unwantedElement2 = document.querySelector('.gone');
+  unwantedElement2.remove();
+
+  const train = document.createElement('h1');
+  train.innerHTML = 'Trains are pretty cool.';
+  content.appendChild(train);
+  const wordle = document.createElement('h1');
+  wordle.innerHTML = 'The Wordle today is SNORE';
+  content.appendChild(wordle);
+  const cat = document.createElement('h1');
+  cat.innerHTML = 'Cat Fingers would be scary';
+  content.appendChild(cat);
+</script>
+</body>
+</html>
