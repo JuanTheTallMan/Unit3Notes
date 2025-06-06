@@ -3,17 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Say Hello</title>
+    <link href ="style.css" rel = "stylesheet" type = "text/css"/>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <div class = "container">
     <div class = "content">
+        <label for = "first">First Name:</label>
         <div class = "row">
-
+            <input type = "text" id = "first" name = "first"  style = "width: 200px;">
+        </div>
+        <label for = "last">Last Name:</label>
+        <div class = "row">
+            <input type = "text" id = "last" name = "last"  style = "width: 200px;">
         </div>
         <div class = "row">
-
+            <button type = "button" id = "sayHello">Say Hello!</button>
+        </div>
+        <div class = "row">
+            <p class = "hidden"></p>
         </div>
     </div>
 </div>
+<script>
+    const firstName = document.getElementById('first');
+    const lastName = document.getElementById('last');
+    const sayHello = document.querySelector('button');
+    const fullNameText = document.querySelector('p');
+    const content = document.getElementById('.content')
+
+    sayHello.addEventListener('click', function(){
+        let fullName = firstName.value + " " + lastName.value;
+        fullNameText.classList.remove('hidden');
+        fullNameText.textContent = "Hello, " + fullName;
+        content.insertAdjacentElement('beforeend', fullNameText.value);
+    })
+
+
+
+</script>
 </body>
 </html>

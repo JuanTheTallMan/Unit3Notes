@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Rect Area</title>
     <link href ="style.css" rel = "stylesheet" type = "text/css"/>
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <div class = "container">
@@ -29,27 +34,29 @@
 </div>
 
 <script>
+    let answer = 0;
     const base = document.getElementById('base');
     const height = document.getElementById('height');
-    const answer = document.querySelector('p');
+    const answerText = document.querySelector('p');
 
     const calculate = document.getElementById('calculate');
     const clear = document.getElementById('clear');
 
-    function multiply(a, b) {
-        return a * b;
+    function multiply(base, height) {
+        answer = base * height;
+        return answer;
     }
 
     calculate.addEventListener('click', function() {
-        answer.classList.remove("hidden");
-        let result = multiply();
-        answer.textContent = 'The area of the rectangle is ' + result;
+        answerText.classList.remove("hidden");
+        multiply(base, height);
+        answerText.textContent = 'The area of the rectangle is ' + answer;
     })
 
     clear.addEventListener('click', function(e){
         base.value = "";
         height.value = "";
-        answer.classList.add("hidden");
+        answerText.classList.add("hidden");
     })
 </script>
 </body>
